@@ -8,6 +8,8 @@ import Employeehomepagecomponent from "./Employeehomepagecomponent";
 import { Carousel } from 'react-bootstrap';
 import { useEffect } from "react";
 export default function FreelancerHome() {
+  const ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+
   useEffect(() => {
 
     if (localStorage.getItem("role") === "null" || localStorage.getItem("role") !== "freelancer") {

@@ -6,13 +6,15 @@ import { useEffect } from 'react';
 import Adminnavbar3 from './Adminnavbar3';
 
 function Adminprofilecomponent(){
+    const ROOT_URL= "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+
 
     const adminId = localStorage.getItem("userId");
     const [adminInfo, setAdminInfo] = useState({});
 
     const adminDetails = async () => {
         const admin = { adminId: adminId }
-        const resp = await axios.post("http://localhost:8081/findadmin", admin);
+        const resp = await axios.post(ROOT_URL+":8081/findadmin", admin);
         setAdminInfo(resp.data);
 
     }

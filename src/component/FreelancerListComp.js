@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 import Adminnavbar3 from "./Adminnavbar3";
 
 function FreelancerListComp() {
+  const ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+
   const [freelancerList, setFreelancerList] = useState([]);
 
   useEffect(() => {
@@ -17,13 +19,13 @@ function FreelancerListComp() {
 
   const getFreelancerList = async () => {
     console.log("in list");
-    const res = await axios.get("http://localhost:8081/FreelancerList");
+    const res = await axios.get(ROOT_URL+":8081/FreelancerList");
     setFreelancerList(res.data);
   };
 
   const updateStatus = async (freelancerId) => {
     const freelancer = { freelancerId: freelancerId };
-    const res = await axios.post("http://localhost:8081/updateFreelancerStatus", freelancer);
+    const res = await axios.post(ROOT_URL+":8081/updateFreelancerStatus", freelancer);
     window.location.href = "/FreelancerListComp";
   };
 

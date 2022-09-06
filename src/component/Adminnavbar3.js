@@ -7,6 +7,8 @@ import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
 function Adminnavbar3() {
+  const ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+
   useEffect(() => {
     if (localStorage.getItem("role") === "null" || localStorage.getItem("role") != "admin") {
       window.location.href = "/Adminlogincomponent";
@@ -24,7 +26,7 @@ function Adminnavbar3() {
 
   const adminDetails = async () => {
     const admin = { adminId: adminId }
-    const resp = await axios.post("http://localhost:8081/findAdmin", admin);
+    const resp = await axios.post(ROOT_URL+":8081/findAdmin", admin);
     setAdminInfo(resp.data);
   }
 

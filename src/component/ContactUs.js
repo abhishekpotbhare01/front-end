@@ -9,6 +9,8 @@ import four from "./assets/images/plumber.jpg";
 import five from "./assets/images/painting.jpg";
 import six from "./assets/images/customer.jpg";
 function AboutUs() {
+  const ROOT_URL = "http://http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+
 
   return (
     <>

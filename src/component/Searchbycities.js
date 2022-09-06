@@ -7,15 +7,15 @@ function Searchbycities() {
   const [city, setCity] = useState([]);
   const [selectedCity, setSelectedCity] = useState("");
   const [freelancerlist, setFreelancerList] = useState([]);
-
+  const ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
   useEffect(() => {
     cities();
   }, []);
-
+ 
   const getFreelancerList = async () => {
     console.log("in freelancers list");
     const freelancer = { frlCity: selectedCity };
-    const res = await axios.post("http://localhost:8081/GetByCity", freelancer);
+    const res = await axios.post(ROOT_URL+":8081/GetByCity", freelancer);
     setFreelancerList(res.data);
     console.log(freelancer)
     console.log(" in getEmpList ", res.data)
@@ -29,7 +29,7 @@ function Searchbycities() {
 
   const getallFreelancerList = async () => {
     console.log("in list");
-    const res = await axios.get("http://localhost:8081/FreelancerList");
+    const res = await axios.get(ROOT_URL+":8081/FreelancerList");
 
     setFreelancerList(res.data);
   };
@@ -64,14 +64,14 @@ function Searchbycities() {
       bookingStatus: "pending",
     };
 
-    await axios.post("http://localhost:8081/AddBooking", bookingdetails);
+    await axios.post(ROOT_URL+":8081/AddBooking", bookingdetails);
     swal("", "request sent", "success");
   };
 
   return (
     <>
       <UserNav />
-<br />
+      <br />
       <div class="col-12 ">
         <div class="col-6 mx-auto">
           <select
@@ -86,7 +86,7 @@ function Searchbycities() {
               return <option value={item}>{item}</option>;
             })}
           </select>
-          
+
           <input
             type="button"
             onClick={() => {

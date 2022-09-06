@@ -5,6 +5,8 @@ import axios from "axios";
 import Adminnavbar3 from "./Adminnavbar3";
 
 function UserListComponent() {
+  const ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+
   const [UserList, setUserList] = useState([]);
   useEffect(() => {
     if (localStorage.getItem("role") === "null" || localStorage.getItem("role") != "admin") {
@@ -15,14 +17,14 @@ function UserListComponent() {
 
   const getUserList = async () => {
     console.log("in list");
-    const res = await axios.get("http://localhost:8081/UserList");
+    const res = await axios.get(ROOT_URL+":8081/UserList");
     setUserList(res.data);
   };
 
   const updateStatus = async (userId) => {
     const user = { userId: userId };
     const res = await axios.post(
-      "http://localhost:8081/updateUserStatus",
+      ROOT_URL+":8081/updateUserStatus",
       user
     );
     window.location.href = "/Userlistcomponent";

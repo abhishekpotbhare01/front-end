@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios';
 import Employeehomepagecomponent from './Employeehomepagecomponent';
 export class EditFreelancer extends Component {
+    
 
     constructor(props) {
         super(props);
@@ -21,6 +22,7 @@ export class EditFreelancer extends Component {
         this.saveUser = this.saveUser.bind(this);
         this.loadUser = this.loadUser.bind(this);
     }
+    
 
     componentDidMount() {
         this.loadUser();
@@ -28,12 +30,14 @@ export class EditFreelancer extends Component {
     }
 
     loadUser() {
+        const  ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+
         const freelancerId = localStorage.getItem("userId");
 
 
         const freelancer = { freelancerId: freelancerId }
        // alert("freelancerId id ", localStorage.getItem("userId"));
-        axios.post("http://localhost:8081/FindByFreelancerId", freelancer)
+        axios.post(ROOT_URL+":8081/FindByFreelancerId", freelancer)
             .then((res) => {
                 let freelancer = res.data;
                 console.log(freelancer);
@@ -78,9 +82,10 @@ export class EditFreelancer extends Component {
 
 
         };
+     const   ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
 
 
-        axios.put("http://localhost:8081/editFreelancer/" + this.state.freelancerId, freelancer).then((res) => {
+        axios.put(ROOT_URL+":8081/editFreelancer/" + this.state.freelancerId, freelancer).then((res) => {
 
            // alert(res.data);
             window.location.href = "/FreelancerProfile";

@@ -5,6 +5,7 @@ import './adminprofile.component.css';
 import axios from 'axios';
 import Employeehomepagecomponent from './Employeehomepagecomponent';
 function FreelancerProfile() {
+    const ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
 
     useEffect(() => {
         freelancerDetails();
@@ -20,7 +21,7 @@ function FreelancerProfile() {
 
     const freelancerDetails = async () => {
         const freelancer = { freelancerId: freelancerId }
-        const resp = await axios.post("http://localhost:8081/FindByFreelancerId", freelancer);
+        const resp = await axios.post(ROOT_URL+":8081/FindByFreelancerId", freelancer);
         setFrlInfo(resp.data);
 
     }

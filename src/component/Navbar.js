@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 export function Navbar() {
+  const ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);

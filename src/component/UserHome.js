@@ -8,6 +8,8 @@ import UserNav from "./UserNav";
 import { Carousel } from 'react-bootstrap';
 import { useEffect} from "react";
 export default function UserHome() {
+  const ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+
   useEffect(() => {
 
     if (localStorage.getItem("role") === "null" || localStorage.getItem("role") !== "user") {

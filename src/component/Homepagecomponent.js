@@ -12,6 +12,8 @@ import six from "./assets/DM.jpg";
 import { Navbar } from "./Navbar";
 
 function Homepagecomponent() {
+  const ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+
   return (
     <>
 

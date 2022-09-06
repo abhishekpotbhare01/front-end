@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import UserNav from "./UserNav";
 
 function ViewComplaints() {
+  const ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+
   const [CompList, setCompList] = useState([]);
   useEffect(() => {
     getCompList();
@@ -10,7 +12,7 @@ function ViewComplaints() {
 
   const getCompList = async () => {
     const comp = { user: { userId: localStorage.getItem("userId") } };
-    const res = await axios.post("http://localhost:8081/getCompByUser", comp);
+    const res = await axios.post(ROOT_URL+":8081/getCompByUser", comp);
     setCompList(res.data);
   };
   return (

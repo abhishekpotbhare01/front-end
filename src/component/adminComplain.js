@@ -4,6 +4,7 @@ import swal from "sweetalert";
 import Adminnavbar3 from "./Adminnavbar3";
 
 function AdminComplain() {
+  const ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
   const [CompList, setCompList] = useState([]);
   useEffect(() => {
     if (localStorage.getItem("role") === "null" || localStorage.getItem("role") != "admin") {
@@ -13,20 +14,20 @@ function AdminComplain() {
   }, []);
 
   const getCompList = async () => {
-    const res = await axios.get("http://localhost:8081/getAllComplaint");
+    const res = await axios.get(ROOT_URL+":8081/getAllComplaint");
     setCompList(res.data);
   };
 
   const resolveComplaint = async (id) => {
     const complaint = { compId: id };
-    await axios.post("http://localhost:8081/resolveCompStatus", complaint);
+    await axios.post(ROOT_URL+":8081/resolveCompStatus", complaint);
     swal("Complaint Resolved", "success");
     window.location.href = "";
   };
 
   const rejectComplaint = async (id) => {
     const complaint = { compId: id };
-    await axios.post("http://localhost:8081/rejectCompStatus", complaint);
+    await axios.post(ROOT_URL+":8081/rejectCompStatus", complaint);
     swal("Complaint Rejected", "success");
     window.location.href = "";
   };

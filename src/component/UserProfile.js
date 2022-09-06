@@ -5,6 +5,8 @@ import './adminprofile.component.css';
 import UserNav from './UserNav';
 import axios from 'axios';
 function UserProfile(){
+    const ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+
 
     useEffect(()=>{
         userDetails();
@@ -21,7 +23,7 @@ function UserProfile(){
       
     const userDetails = async () => {
             const user = { userId: userId }
-            const resp = await axios.post("http://localhost:8081/findByUserId", user);
+            const resp = await axios.post(ROOT_URL+":8081/findByUserId", user);
             setUserInfo(resp.data);
       }
 

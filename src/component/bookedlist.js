@@ -5,6 +5,8 @@ import UserNav from "./UserNav";
 import swal from "sweetalert";
 
 function BookedList() {
+  const ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+
   const [bookinglist, setBookinglist] = useState([]);
 
   useEffect(() => {
@@ -17,7 +19,7 @@ function BookedList() {
 
   const getBookingList = async () => {
     const booking = { user: { userId: localStorage.getItem("userId") } };
-    const res = await axios.post("http://localhost:8081/GetBookingByUser", booking);
+    const res = await axios.post(ROOT_URL+":8081/GetBookingByUser", booking);
     setBookinglist(res.data);
   };
 
@@ -34,7 +36,7 @@ function BookedList() {
   const CancelBooking = async (bookingId) => {
     const booking = { bookingId: bookingId };
     console.log(bookingId);
-    const res = await axios.post("http://localhost:8081/CancelBooking", booking);
+    const res = await axios.post(ROOT_URL+":8081/CancelBooking", booking);
     //SweetAlert("", res.data, "");
     swal({
       title: "Are you sure?",

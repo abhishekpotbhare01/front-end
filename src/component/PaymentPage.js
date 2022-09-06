@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import UserNav from './UserNav';
 import axios from 'axios';
 function PaymentPage() {
+    const ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+
 
     const [payment, SetPayment] = useState(0)
     const [bookingList, setBookinglist] = useState([])
@@ -19,7 +21,7 @@ function PaymentPage() {
     const paymentHandler = async () => {
         const booking = { bookingId: window.localStorage.getItem("bookingId") };
         console.log('bookingId',window.localStorage.getItem("bookingId") )
-        const res = await axios.post("http://localhost:8081/GetBookingDetails", booking);
+        const res = await axios.post(ROOT_URL+":8081/GetBookingDetails", booking);
         setBookinglist(res.data);
     };
 
@@ -43,7 +45,7 @@ function PaymentPage() {
         }
 
 
-        axios.post("http://localhost:8081/savePaymentDetails", paymentDetails).then((res) => {
+        axios.post(ROOT_URL+":8081/savePaymentDetails", paymentDetails).then((res) => {
 
         })
 

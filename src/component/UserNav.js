@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
 function UserNav() {
+  const ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+
   const logout = () => {
     localStorage.setItem("role", null);
     window.location.href = "/Adminlogincomponent";

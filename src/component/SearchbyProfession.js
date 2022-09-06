@@ -4,6 +4,8 @@ import UserNav from "./UserNav";
 import swal from "sweetalert";
 import Apiservice from "../service/Apiservice";
 function SearchByProfession() {
+  const ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+
   const [prof, setProf] = useState([]);
   const [selectedProfession, setSelectedProfession] = useState("");
   const [freelancerList, setFreelancerList] = useState([]);
@@ -15,7 +17,7 @@ function SearchByProfession() {
   const getFreelancerList = async () => {
     console.log("in list");
     const freelancer = { frlProfession: selectedProfession };
-    const res = await axios.post("http://localhost:8081/GetByProfession", freelancer);
+    const res = await axios.post(ROOT_URL+":8081/GetByProfession", freelancer);
     setFreelancerList(res.data);
   };
   useEffect(() => {
@@ -28,7 +30,7 @@ function SearchByProfession() {
 
   const getAllFreelancerList = async () => {
     console.log("in Freelancer list");
-    const res = await axios.get("http://localhost:8081/FreelancerList");
+    const res = await axios.get(ROOT_URL+":8081/FreelancerList");
 
     setFreelancerList(res.data);
   };
@@ -61,7 +63,7 @@ function SearchByProfession() {
       bookingStatus: "pending",
     };
 
-    await axios.post("http://localhost:8081/AddBooking", bookingdetails);
+    await axios.post(ROOT_URL+":8081/AddBooking", bookingdetails);
     swal("","request sent","success");
   };
 

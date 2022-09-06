@@ -4,6 +4,8 @@ import SweetAlert from "sweetalert";
 import Employeehomepagecomponent from "./Employeehomepagecomponent";
 
 function ViewOrders() {
+  const ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+
   const [hirelist, setHirelist] = useState([]);
   const [userId, setUserId] = useState([])
   const [payment, setPayement] = useState([])
@@ -21,20 +23,20 @@ function ViewOrders() {
     // const bookings = { emp: { empId: localStorage.getItem("userId") } };
     const bookings = { freelancer: { freelancerId: userId } }
     console.log(" in getHireList " + bookings);
-    const res = await axios.post("http://localhost:8081/getBookingsByFreelancer", bookings);
+    const res = await axios.post(ROOT_URL+":8081/getBookingsByFreelancer", bookings);
     setHirelist(res.data);
   };
 
   const acceptBooking = async (bookingId) => {
     const bookings = { bookingId: bookingId, paymentAmount: payment };
-    const res = await axios.post("http://localhost:8081/acceptBooking", bookings);
+    const res = await axios.post(ROOT_URL+":8081/acceptBooking", bookings);
     SweetAlert("success", res.data, "success");
     window.location.href = "";
   };
 
   const rejectBooking = async (bookingId) => {
     const bookings = { bookingId: bookingId };
-    const res = await axios.post("http://localhost:8081/rejectRooking", bookings);
+    const res = await axios.post(ROOT_URL+":8081/rejectRooking", bookings);
     SweetAlert("", res.data, "");
     window.location.href = "";
   };
@@ -47,7 +49,7 @@ function ViewOrders() {
   }
   useEffect(() => {
 
-    axios.post("http://localhost:8081/FindByFreelancerId", freelancer).then((res) => {
+    axios.post(ROOT_URL+":8081/FindByFreelancerId", freelancer).then((res) => {
       setBalance(res.data.totalAmount);
       console.log(" balnce chebckloo ", res.data.totalAmount)
     })

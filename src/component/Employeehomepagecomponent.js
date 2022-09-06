@@ -8,6 +8,8 @@ import "./NavBar.css";;
 
 
 function Employeehomepagecomponent() {
+  const  ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+
   const [balance, setBalance] = useState(0);
   const freelancerId = window.localStorage.getItem("userId");
 
@@ -20,7 +22,7 @@ function Employeehomepagecomponent() {
 
   useEffect(() => {
 
-    axios.post("http://localhost:8081/FindByFreelancerId", freelancer).then((res) => {
+    axios.post(ROOT_URL+":8081/FindByFreelancerId", freelancer).then((res) => {
       setBalance(res.data.totalAmount);
       console.log(" balnce chebckloo ", res.data.totalAmount)
     })

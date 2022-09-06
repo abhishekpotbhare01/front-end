@@ -8,6 +8,8 @@ import { Navbar } from "./Navbar";
 import swal from "sweetalert";
 
 function FreelancerRegistration() {
+  const ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+
   const [frlName, setFrlName] = useState("");
   
   const [frlAddress, setFrlAddress] = useState("");
@@ -78,7 +80,7 @@ function FreelancerRegistration() {
     };
     
     try {
-      const resp = await axios.post("http://localhost:8081/AddFreelancer", frl);
+      const resp = await axios.post(ROOT_URL+":8081/AddFreelancer", frl);
     
     } catch (error) {
       swal("error", "please enter valid details", "error");

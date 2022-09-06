@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import errorPage from "./assets/pimage/404.png";
 
 export default class ErrorNotFound extends Component {
+    
 
     render() {
+        const  ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+
         return (
             <div>
             <div id='error'>

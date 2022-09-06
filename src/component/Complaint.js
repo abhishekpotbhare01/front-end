@@ -4,6 +4,8 @@ import SweetAlert from "sweetalert";
 import UserNav from "./UserNav";
 
 function Complaint() {
+  const ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+
   const [issue, setEssue] = useState("");
   const [description, setDescription] = useState("");
 
@@ -24,7 +26,7 @@ function Complaint() {
       freelancer: { freelancerId: localStorage.getItem("freelancerId") },
     };
 
-    await axios.post("http://localhost:8081/addComplaint", complaint);
+    await axios.post(ROOT_URL+":8081/addComplaint", complaint);
     SweetAlert("", "Your complaint is posted", "success");
   };
 
