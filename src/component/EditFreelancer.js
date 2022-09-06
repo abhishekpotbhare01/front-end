@@ -30,7 +30,7 @@ export class EditFreelancer extends Component {
     }
 
     loadUser() {
-        const  ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+        const  ROOT_URL = "abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
         const freelancerId = localStorage.getItem("userId");
 
@@ -82,7 +82,7 @@ export class EditFreelancer extends Component {
 
 
         };
-     const   ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+     const   ROOT_URL = "abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
 
         axios.put(ROOT_URL+":8081/editFreelancer/" + this.state.freelancerId, freelancer).then((res) => {

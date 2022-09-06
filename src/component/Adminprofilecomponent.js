@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import Adminnavbar3 from './Adminnavbar3';
 
 function Adminprofilecomponent(){
-    const ROOT_URL= "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+    const ROOT_URL= "abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
 
     const adminId = localStorage.getItem("userId");

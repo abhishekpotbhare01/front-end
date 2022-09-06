@@ -1,5 +1,5 @@
 import axios from 'axios';
-const ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+const ROOT_URL = "abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
 const USER_API_BASE_URL = ROOT_URL+':8081/users';
 const USER_API_BASE_URL1=ROOT_URL+':8081'

@@ -5,7 +5,7 @@ export default class ErrorNotFound extends Component {
     
 
     render() {
-        const  ROOT_URL = "http://freelancerbackend-env.eba-wzxumskd.us-east-1.elasticbeanstalk.com";
+        const  ROOT_URL = "abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
         return (
             <div>
