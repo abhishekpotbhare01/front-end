@@ -4,7 +4,7 @@ import swal from "sweetalert";
 import Adminnavbar3 from "./Adminnavbar3";
 
 function AdminComplain() {
-  const ROOT_URL = "https://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
   const [CompList, setCompList] = useState([]);
   useEffect(() => {
     if (localStorage.getItem("role") === "null" || localStorage.getItem("role") != "admin") {

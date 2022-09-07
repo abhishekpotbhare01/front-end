@@ -11,7 +11,7 @@ import { Navbar } from "./Navbar";
 import swal from "sweetalert";
 
 function UserReg() {
-  const ROOT_URL = "https://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
   const [userName, setUserName] = useState("");
   // const [custGender, setCustGender] = useState("");
@@ -75,7 +75,7 @@ function UserReg() {
     swal("success", " Your Registration Completed Successful", "success");
     window.location.href="/Adminlogincomponent";
 
-    // const resp = await axios.post("https://localhost:/addUser", usr);
+    // const resp = await axios.post("http://localhost:/addUser", usr);
     // if(resp.status){
     //   swal("error", "please enter valid details", "error");
     // }

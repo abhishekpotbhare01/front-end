@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
 function Adminnavbar3() {
-  const ROOT_URL = "https://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
   useEffect(() => {
     if (localStorage.getItem("role") === "null" || localStorage.getItem("role") != "admin") {

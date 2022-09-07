@@ -4,7 +4,7 @@ import UserNav from "./UserNav";
 import swal from "sweetalert";
 import Apiservice from "../service/Apiservice";
 function SearchByProfession() {
-  const ROOT_URL = "https://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
   const [prof, setProf] = useState([]);
   const [selectedProfession, setSelectedProfession] = useState("");
@@ -36,7 +36,7 @@ function SearchByProfession() {
   };
 
   // const allProf = async () => {
-  //   const profs = await axios.get("https://localhost:/GetAllProfession");
+  //   const profs = await axios.get("http://localhost:/GetAllProfession");
   //   console.log("in Get all profession list");
   //   setProf(profs.data);
   // };

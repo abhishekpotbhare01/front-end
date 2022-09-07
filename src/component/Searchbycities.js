@@ -7,7 +7,7 @@ function Searchbycities() {
   const [city, setCity] = useState([]);
   const [selectedCity, setSelectedCity] = useState("");
   const [freelancerlist, setFreelancerList] = useState([]);
-  const ROOT_URL = "https://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
   useEffect(() => {
     cities();
   }, []);
@@ -35,7 +35,7 @@ function Searchbycities() {
   };
 
   // const cities = async () => {
-  //   const City1 = await axios.get("https://localhost:/GetAllCities");
+  //   const City1 = await axios.get("http://localhost:/GetAllCities");
   //   setCity(City1.data.map( (resp1) => {
   //     return resp1.frlCity;
   //   }));

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import UserNav from "./UserNav";
 
 function ViewComplaints() {
-  const ROOT_URL = "https://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
   const [CompList, setCompList] = useState([]);
   useEffect(() => {

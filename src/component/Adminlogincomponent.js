@@ -8,7 +8,7 @@ import { Navbar } from "./Navbar";
 import swal from "sweetalert";
 
 function Adminlogincomponent() {
-  const ROOT_URL = "https://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -107,7 +107,7 @@ function Adminlogincomponent() {
                     <br />
                     <div>
                       <svg
-                        xmlns="https://www.w3.org/2000/svg"
+                        xmlns="http://www.w3.org/2000/svg"
                         width="50"
                         height="50"
                         fill="currentColor"
