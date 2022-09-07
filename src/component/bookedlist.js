@@ -5,7 +5,7 @@ import UserNav from "./UserNav";
 import swal from "sweetalert";
 
 function BookedList() {
-  const ROOT_URL = "abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
   const [bookinglist, setBookinglist] = useState([]);
 

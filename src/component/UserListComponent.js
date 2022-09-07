@@ -5,7 +5,7 @@ import axios from "axios";
 import Adminnavbar3 from "./Adminnavbar3";
 
 function UserListComponent() {
-  const ROOT_URL = "abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
   const [UserList, setUserList] = useState([]);
   useEffect(() => {

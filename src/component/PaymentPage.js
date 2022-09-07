@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import UserNav from './UserNav';
 import axios from 'axios';
 function PaymentPage() {
-    const ROOT_URL = "abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+    const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
 
     const [payment, SetPayment] = useState(0)

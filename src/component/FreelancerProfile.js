@@ -5,7 +5,7 @@ import './adminprofile.component.css';
 import axios from 'axios';
 import Employeehomepagecomponent from './Employeehomepagecomponent';
 function FreelancerProfile() {
-    const ROOT_URL = "abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+    const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
     useEffect(() => {
         freelancerDetails();

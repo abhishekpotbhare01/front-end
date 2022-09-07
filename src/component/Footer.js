@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import 'font-awesome/css/font-awesome.min.css';
 import "./Footer.css";
 export function Footer() {
-  const ROOT_URL = "abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
   return (
 
