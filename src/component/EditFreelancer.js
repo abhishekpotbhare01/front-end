@@ -7,16 +7,16 @@ export class EditFreelancer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            frlName "",
-            frlProfession "",
-            frlAddress "",
-            frlContact "",
-            frlEmail "",
-            frlPassword "",
-            frlCity "",
-            frlExperience 0,
-            frlRatePerHr 0,
-            status ""
+            frlName: "",
+            frlProfession: "",
+            frlAddress: "",
+            frlContact: "",
+            frlEmail: "",
+            frlPassword: "",
+            frlCity: "",
+            frlExperience: 0,
+            frlRatePerHr: 0,
+            status: ""
 
         }
         this.saveUser = this.saveUser.bind(this);
@@ -35,24 +35,24 @@ export class EditFreelancer extends Component {
         const freelancerId = localStorage.getItem("userId");
 
 
-        const freelancer = { freelancerId freelancerId }
+        const freelancer = { freelancerId: freelancerId }
        // alert("freelancerId id ", localStorage.getItem("userId"));
-        axios.post(ROOT_URL+"/FindByFreelancerId", freelancer)
+        axios.post(ROOT_URL+":/FindByFreelancerId", freelancer)
             .then((res) => {
                 let freelancer = res.data;
                 console.log(freelancer);
                 this.setState({
-                    freelancerId freelancer.freelancerId,
-                    frlName freelancer.frlName,
-                    frlProfession freelancer.frlProfession,
-                    frlAddress freelancer.frlAddress,
-                    frlContact freelancer.frlContact,
-                    frlEmail freelancer.frlEmail,
-                    frlPassword freelancer.frlPassword,
-                    frlCity freelancer.frlCity,
-                    frlExperience freelancer.frlExperience,
-                    frlRatePerHr freelancer.frlRatePerHr,
-                    status freelancer.status
+                    freelancerId: freelancer.freelancerId,
+                    frlName: freelancer.frlName,
+                    frlProfession: freelancer.frlProfession,
+                    frlAddress: freelancer.frlAddress,
+                    frlContact: freelancer.frlContact,
+                    frlEmail: freelancer.frlEmail,
+                    frlPassword: freelancer.frlPassword,
+                    frlCity: freelancer.frlCity,
+                    frlExperience: freelancer.frlExperience,
+                    frlRatePerHr: freelancer.frlRatePerHr,
+                    status: freelancer.status
 
 
                 })
@@ -60,22 +60,22 @@ export class EditFreelancer extends Component {
     }
 
     onChange = (e) =>
-        this.setState({ [e.target.name] e.target.value });
+        this.setState({ [e.target.name]: e.target.value });
 
     saveUser = (e) => {
         e.preventDefault();
         let freelancer = {
-            freelancerId this.state.freelancerId,
-            frlName this.state.frlName,
-            frlProfession this.state.frlProfession,
-            frlAddress this.state.frlAddress,
-            frlContact this.state.frlContact,
-            frlEmail this.state.frlEmail,
-            frlPassword this.state.frlPassword,
-            frlCity this.state.frlCity,
-            frlExperience this.state.frlExperience,
-            frlRatePerHr this.state.frlRatePerHr,
-            status this.state.status
+            freelancerId: this.state.freelancerId,
+            frlName: this.state.frlName,
+            frlProfession: this.state.frlProfession,
+            frlAddress: this.state.frlAddress,
+            frlContact: this.state.frlContact,
+            frlEmail: this.state.frlEmail,
+            frlPassword: this.state.frlPassword,
+            frlCity: this.state.frlCity,
+            frlExperience: this.state.frlExperience,
+            frlRatePerHr: this.state.frlRatePerHr,
+            status: this.state.status
 
 
 
@@ -85,7 +85,7 @@ export class EditFreelancer extends Component {
      const   ROOT_URL = "abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
 
-        axios.put(ROOT_URL+"/editFreelancer/" + this.state.freelancerId, freelancer).then((res) => {
+        axios.put(ROOT_URL+":/editFreelancer/" + this.state.freelancerId, freelancer).then((res) => {
 
            // alert(res.data);
             window.location.href = "/FreelancerProfile";

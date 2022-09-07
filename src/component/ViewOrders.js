@@ -4,7 +4,7 @@ import SweetAlert from "sweetalert";
 import Employeehomepagecomponent from "./Employeehomepagecomponent";
 
 function ViewOrders() {
-  const ROOT_URL = "http//abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
   const [hirelist, setHirelist] = useState([]);
   const [userId, setUserId] = useState([])
@@ -20,23 +20,23 @@ function ViewOrders() {
   }, [userId]);
 
   const getHireList = async () => {
-    // const bookings = { emp { empId localStorage.getItem("userId") } };
-    const bookings = { freelancer { freelancerId userId } }
+    // const bookings = { emp: { empId: localStorage.getItem("userId") } };
+    const bookings = { freelancer: { freelancerId: userId } }
     console.log(" in getHireList " + bookings);
-    const res = await axios.post(ROOT_URL+"/getBookingsByFreelancer", bookings);
+    const res = await axios.post(ROOT_URL+":/getBookingsByFreelancer", bookings);
     setHirelist(res.data);
   };
 
   const acceptBooking = async (bookingId) => {
-    const bookings = { bookingId bookingId, paymentAmount payment };
-    const res = await axios.post(ROOT_URL+"/acceptBooking", bookings);
+    const bookings = { bookingId: bookingId, paymentAmount: payment };
+    const res = await axios.post(ROOT_URL+":/acceptBooking", bookings);
     SweetAlert("success", res.data, "success");
     window.location.href = "";
   };
 
   const rejectBooking = async (bookingId) => {
-    const bookings = { bookingId bookingId };
-    const res = await axios.post(ROOT_URL+"/rejectRooking", bookings);
+    const bookings = { bookingId: bookingId };
+    const res = await axios.post(ROOT_URL+":/rejectRooking", bookings);
     SweetAlert("", res.data, "");
     window.location.href = "";
   };
@@ -45,11 +45,11 @@ function ViewOrders() {
   const freelancerId = window.localStorage.getItem("userId");
 
   const freelancer = {
-    freelancerId freelancerId
+    freelancerId: freelancerId
   }
   useEffect(() => {
 
-    axios.post(ROOT_URL+"/FindByFreelancerId", freelancer).then((res) => {
+    axios.post(ROOT_URL+":/FindByFreelancerId", freelancer).then((res) => {
       setBalance(res.data.totalAmount);
       console.log(" balnce chebckloo ", res.data.totalAmount)
     })
@@ -69,18 +69,18 @@ function ViewOrders() {
             ) {
               return (
                 <div class='row'>
-                  <div class="card m-auto mb-3 card-text d-flex" style={{ width "350px", padding "10px" }}>
+                  <div class="card m-auto mb-3 card-text d-flex" style={{ width: "350px", padding: "10px" }}>
 
-                    <th style={{ fontSize '30px', color "#000075" }}>{item.user.userName}</th><hr />
-                    <th style={{ fontSize '15px' }}>Address  {item.user.userAddress}</th>
+                    <th style={{ fontSize: '30px', color: "#000075" }}>{item.user.userName}</th><hr />
+                    <th style={{ fontSize: '15px' }}>Address : {item.user.userAddress}</th>
 
-                    <th style={{ fontSize '15px' }}>Contact  {item.user.userContact}</th>
+                    <th style={{ fontSize: '15px' }}>Contact : {item.user.userContact}</th>
 
-                    <th style={{ fontSize '15px' }}>Hire Date  {item.bookingDate}</th>
-                    <th style={{ fontSize '15px' }}>Booking Status  {item.bookingStatus}</th>
-                    <th style={{ fontSize '15px' }}>Payment Status  {item.paymentStatus}</th>
+                    <th style={{ fontSize: '15px' }}>Hire Date : {item.bookingDate}</th>
+                    <th style={{ fontSize: '15px' }}>Booking Status : {item.bookingStatus}</th>
+                    <th style={{ fontSize: '15px' }}>Payment Status : {item.paymentStatus}</th>
                    
-                    <th style={{ fontSize '18px', color '#000075' }} >Payment Amount <div style={{background '#FCF3CF'}}>  <input autoFocus='true' style={{ fontSize '18px', fontWeight 'bold'}} type="number" onChange={(e) => {
+                    <th style={{ fontSize: '18px', color: '#000075' }} >Payment Amount: <div style={{background: '#FCF3CF'}}>  <input autoFocus='true' style={{ fontSize: '18px', fontWeight: 'bold'}} type="number" onChange={(e) => {
                       setPayement(e.target.value);
                     }} placeholder="Enter Amount" ></input> </div> </th>
                     
@@ -107,7 +107,7 @@ function ViewOrders() {
                     </div>
 
                   </div>
-                  {/* <div class="float-sm-start" style={{  responsive true, fontWeight 'bold',fontSize '25px',color"#633974" }}>Balance  {balance}</div> */}
+                  {/* <div class="float-sm-start" style={{  responsive: true, fontWeight: 'bold',fontSize: '25px',color:"#633974" }}>Balance : {balance}</div> */}
                 </div>
 
               );

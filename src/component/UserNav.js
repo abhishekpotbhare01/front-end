@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
 function UserNav() {
-  const ROOT_URL = "http//abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
   const logout = () => {
     localStorage.setItem("role", null);
@@ -21,9 +21,9 @@ function UserNav() {
 
         <div className="nav-container">
         
-         <ul className={click ? "nav-menu active"  "nav-menu"}>
+         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li>
-          <a class="navbar-brand" href="/UserHome" style={{color"orange"}}>Freelance Portal</a>
+          <a class="navbar-brand" href="/UserHome" style={{color:"orange"}}>Freelance Portal</a>
             </li>
             {/* <li className="nav-item">
               <NavLink
@@ -105,7 +105,7 @@ function UserNav() {
             </li>
           </ul>
           <div className="nav-icon" onClick={handleClick}>
-            <i className={click ? "fas fa-times"  "fas fa-bars"}></i>
+            <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
           </div>
         </div>
       </nav>

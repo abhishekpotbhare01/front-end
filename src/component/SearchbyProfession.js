@@ -4,7 +4,7 @@ import UserNav from "./UserNav";
 import swal from "sweetalert";
 import Apiservice from "../service/Apiservice";
 function SearchByProfession() {
-  const ROOT_URL = "http//abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
   const [prof, setProf] = useState([]);
   const [selectedProfession, setSelectedProfession] = useState("");
@@ -16,8 +16,8 @@ function SearchByProfession() {
 
   const getFreelancerList = async () => {
     console.log("in list");
-    const freelancer = { frlProfession selectedProfession };
-    const res = await axios.post(ROOT_URL+"/GetByProfession", freelancer);
+    const freelancer = { frlProfession: selectedProfession };
+    const res = await axios.post(ROOT_URL+":/GetByProfession", freelancer);
     setFreelancerList(res.data);
   };
   useEffect(() => {
@@ -30,13 +30,13 @@ function SearchByProfession() {
 
   const getAllFreelancerList = async () => {
     console.log("in Freelancer list");
-    const res = await axios.get(ROOT_URL+"/FreelancerList");
+    const res = await axios.get(ROOT_URL+":/FreelancerList");
 
     setFreelancerList(res.data);
   };
 
   // const allProf = async () => {
-  //   const profs = await axios.get("http//localhost/GetAllProfession");
+  //   const profs = await axios.get("http://localhost:/GetAllProfession");
   //   console.log("in Get all profession list");
   //   setProf(profs.data);
   // };
@@ -57,13 +57,13 @@ function SearchByProfession() {
 
   const bookFreelancer = async (id) => {
     const bookingdetails = {
-      user { userId localStorage.getItem("userId") },
-      freelancer { freelancerId id },
-      bookingDate date,
-      bookingStatus "pending",
+      user: { userId: localStorage.getItem("userId") },
+      freelancer: { freelancerId: id },
+      bookingDate: date,
+      bookingStatus: "pending",
     };
 
-    await axios.post(ROOT_URL+"/AddBooking", bookingdetails);
+    await axios.post(ROOT_URL+":/AddBooking", bookingdetails);
     swal("","request sent","success");
   };
 
@@ -101,18 +101,18 @@ function SearchByProfession() {
             
           {freelancerList.map((item) => {
             return (
-              <div class="card m-auto mb-3 card-text d-flex" style={{ width "400px",padding "10px"}}>
-                  {/* <div class=" card text-dark " style={{ color 'black' }}> */}
-                    <th style={{ fontSize '25px', color '#000075' }}> {item.frlName}</th><hr />
-                    <th style={{ fontSize '22px' }}>Profession  {item.frlProfession}</th>
-                    <th style={{ fontSize '15px' }}>City  {item.frlCity}</th>
-                    <th style={{ fontSize '15px' }}>Contact  {item.frlContact}</th>
+              <div class="card m-auto mb-3 card-text d-flex" style={{ width: "400px",padding: "10px"}}>
+                  {/* <div class=" card text-dark " style={{ color: 'black' }}> */}
+                    <th style={{ fontSize: '25px', color: '#000075' }}> {item.frlName}</th><hr />
+                    <th style={{ fontSize: '22px' }}>Profession : {item.frlProfession}</th>
+                    <th style={{ fontSize: '15px' }}>City : {item.frlCity}</th>
+                    <th style={{ fontSize: '15px' }}>Contact : {item.frlContact}</th>
 
-                    <th style={{ fontSize '15px' }}>Exp(Yrs)  {item.frlExperience}</th>
-                    <th style={{ fontSize '15px' }}>Rate/hr  {item.frlRatePerHr}</th>
-                    <th style={{ fontSize '15px' }}>Email  {item.frlEmail}</th>
+                    <th style={{ fontSize: '15px' }}>Exp(Yrs) : {item.frlExperience}</th>
+                    <th style={{ fontSize: '15px' }}>Rate/hr : {item.frlRatePerHr}</th>
+                    <th style={{ fontSize: '15px' }}>Email : {item.frlEmail}</th>
                     <th>&nbsp;</th>
-                    <th style={{ fontSize '15px', fontWeight 'bold' }}>Status  {item.status}</th>
+                    <th style={{ fontSize: '15px', fontWeight: 'bold' }}>Status : {item.status}</th>
                     <div class="row card-footer m-1  ">
                       <button
                         class="btn btn-success"

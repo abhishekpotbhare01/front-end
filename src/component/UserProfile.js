@@ -5,7 +5,7 @@ import './adminprofile.component.css';
 import UserNav from './UserNav';
 import axios from 'axios';
 function UserProfile(){
-    const ROOT_URL = "http//abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+    const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
 
     useEffect(()=>{
@@ -22,8 +22,8 @@ function UserProfile(){
     const [userInfo, setUserInfo] = useState({});
       
     const userDetails = async () => {
-            const user = { userId userId }
-            const resp = await axios.post(ROOT_URL+"/findByUserId", user);
+            const user = { userId: userId }
+            const resp = await axios.post(ROOT_URL+":/findByUserId", user);
             setUserInfo(resp.data);
       }
 
@@ -37,7 +37,7 @@ function UserProfile(){
      <div class="col-md-2"></div>
          <div class="col-md-2">
              <div class="profile-img">
-                 <img src="https//img.icons8.com/dusk/64/000000/change-user-male.png" />
+                 <img src="https://img.icons8.com/dusk/64/000000/change-user-male.png" />
              </div>
          </div>
          <div class="col-md-6">

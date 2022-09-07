@@ -9,7 +9,7 @@ import four from "./assets/images/plumber.jpg";
 import five from "./assets/images/painting.jpg";
 import six from "./assets/images/customer.jpg";
 function AboutUs() {
-  const ROOT_URL = "http//abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
 
   return (
@@ -20,7 +20,7 @@ function AboutUs() {
       <br />
       
       
-      <div style={{ fontFamily "Block" }}><h2 >Our Offices<hr /><br /></h2>
+      <div style={{ fontFamily: "Block" }}><h2 >Our Offices<hr /><br /></h2>
 
 <h3>Mississippi<br /><br />
 711-2880 Nulla St.

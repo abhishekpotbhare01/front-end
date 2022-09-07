@@ -14,7 +14,7 @@ function Employeehomepagecomponent() {
   const freelancerId = window.localStorage.getItem("userId");
 
   const freelancer = {
-    freelancerId freelancerId
+    freelancerId: freelancerId
   }
 
 
@@ -22,7 +22,7 @@ function Employeehomepagecomponent() {
 
   useEffect(() => {
 
-    axios.post(ROOT_URL+"/FindByFreelancerId", freelancer).then((res) => {
+    axios.post(ROOT_URL+":/FindByFreelancerId", freelancer).then((res) => {
       setBalance(res.data.totalAmount);
       console.log(" balnce chebckloo ", res.data.totalAmount)
     })
@@ -46,9 +46,9 @@ function Employeehomepagecomponent() {
 
         <div className="nav-container">
 
-          <ul className={click ? "nav-menu active"  "nav-menu"}>
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li>
-              <a class="navbar-brand" href="FreelancerHome" style={{ color "orange" }}>Freelance Portal</a>
+              <a class="navbar-brand" href="FreelancerHome" style={{ color: "orange" }}>Freelance Portal</a>
             </li>
             <li className="nav-item">
               <NavLink
@@ -95,11 +95,11 @@ function Employeehomepagecomponent() {
               </NavLink>
             </li>
 
-            <li className="nav-links">Total Balance{balance}
+            <li className="nav-links">Total Balance:{balance}
             </li>
           </ul>
           <div className="nav-icon" onClick={handleClick}>
-            <i className={click ? "fas fa-times"  "fas fa-bars"}></i>
+            <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
           </div>
         </div>
       </nav>

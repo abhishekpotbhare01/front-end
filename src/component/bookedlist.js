@@ -5,7 +5,7 @@ import UserNav from "./UserNav";
 import swal from "sweetalert";
 
 function BookedList() {
-  const ROOT_URL = "http//abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
   const [bookinglist, setBookinglist] = useState([]);
 
@@ -18,8 +18,8 @@ function BookedList() {
   }, []);
 
   const getBookingList = async () => {
-    const booking = { user { userId localStorage.getItem("userId") } };
-    const res = await axios.post(ROOT_URL+"/GetBookingByUser", booking);
+    const booking = { user: { userId: localStorage.getItem("userId") } };
+    const res = await axios.post(ROOT_URL+":/GetBookingByUser", booking);
     setBookinglist(res.data);
   };
 
@@ -34,21 +34,21 @@ function BookedList() {
   }
 
   const CancelBooking = async (bookingId) => {
-    const booking = { bookingId bookingId };
+    const booking = { bookingId: bookingId };
     console.log(bookingId);
-    const res = await axios.post(ROOT_URL+"/CancelBooking", booking);
+    const res = await axios.post(ROOT_URL+":/CancelBooking", booking);
     //SweetAlert("", res.data, "");
     swal({
-      title "Are you sure?",
-      text "You want to cancel this booking!",
-      icon "warning",
-      buttons true,
-      dangerMode true,
+      title: "Are you sure?",
+      text: "You want to cancel this booking!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
     })
       .then((willDelete) => {
         if (willDelete) {
           swal("Booking Cancelled", {
-            icon "success",
+            icon: "success",
           });
         } else {
           swal("Your Booking is not cancelled!");
@@ -64,17 +64,17 @@ function BookedList() {
         <div class="m-4">&nbsp;</div>
         {bookinglist.map((item) => {
           return (
-            <div class="card m-auto mb-3 card-text d-flex" style={{ width "400px", padding "10px" }}>
-              <th style={{ fontSize '25px', color '#000075' }}>{item.freelancer.frlName}</th><hr />
-              <th style={{ fontSize '20px' }}>Profession  {item.freelancer.frlProfession}</th>
-              <th style={{ fontSize '15px' }}>Address  {item.freelancer.frlAddress}</th>
-              <th style={{ fontSize '15px' }}>City  {item.freelancer.frlCity}</th>
-              <th style={{ fontSize '15px' }}>Contact  {item.freelancer.frlContact}</th>
+            <div class="card m-auto mb-3 card-text d-flex" style={{ width: "400px", padding: "10px" }}>
+              <th style={{ fontSize: '25px', color: '#000075' }}>{item.freelancer.frlName}</th><hr />
+              <th style={{ fontSize: '20px' }}>Profession : {item.freelancer.frlProfession}</th>
+              <th style={{ fontSize: '15px' }}>Address : {item.freelancer.frlAddress}</th>
+              <th style={{ fontSize: '15px' }}>City : {item.freelancer.frlCity}</th>
+              <th style={{ fontSize: '15px' }}>Contact : {item.freelancer.frlContact}</th>
 
-              <th style={{ fontSize '15px' }}>Rate/hr  {item.freelancer.frlRatePerHr}</th>
-              <th style={{ fontSize '15px' }}>Date  {item.bookingDate}</th>
+              <th style={{ fontSize: '15px' }}>Rate/hr : {item.freelancer.frlRatePerHr}</th>
+              <th style={{ fontSize: '15px' }}>Date : {item.bookingDate}</th>
               <br />
-              <th style={{ fontSize '15px' }}>Status  {item.bookingStatus}</th>
+              <th style={{ fontSize: '15px' }}>Status : {item.bookingStatus}</th>
 
               <div class="row card-footer m-1 ">
                 <button

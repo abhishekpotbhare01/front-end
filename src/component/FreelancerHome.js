@@ -8,7 +8,7 @@ import Employeehomepagecomponent from "./Employeehomepagecomponent";
 import { Carousel } from 'react-bootstrap';
 import { useEffect } from "react";
 export default function FreelancerHome() {
-  const ROOT_URL = "http//abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
   useEffect(() => {
 
@@ -25,16 +25,16 @@ export default function FreelancerHome() {
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src={four} class="d-block" 
-            alt="Responsive image" style={{ width "1500px" , height "600px" }} />
+            alt="Responsive image" style={{ width: "1500px" , height: "600px" }} />
           </div>
           <div class="carousel-item">
-            <img src={two} class="d-block w-100"  alt="Responsive image" style={{ width "1500px" , height "600px" }} />
+            <img src={two} class="d-block w-100"  alt="Responsive image" style={{ width: "1500px" , height: "600px" }} />
           </div>
           <div class="carousel-item">
-            <img src={three} class="d-block w-100"  alt="Responsive image" style={{ width "1500px" , height "600px" }} />
+            <img src={three} class="d-block w-100"  alt="Responsive image" style={{ width: "1500px" , height: "600px" }} />
           </div>
           <div class="carousel-item">
-            <img src={one} class="d-block w-100"  alt="Responsive image" style={{ width "1500px" , height "600px" }} />
+            <img src={one} class="d-block w-100"  alt="Responsive image" style={{ width: "1500px" , height: "600px" }} />
           </div>
         </div>
         

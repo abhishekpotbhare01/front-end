@@ -5,7 +5,7 @@ import './adminprofile.component.css';
 import axios from 'axios';
 import Employeehomepagecomponent from './Employeehomepagecomponent';
 function FreelancerProfile() {
-    const ROOT_URL = "http//abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+    const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
     useEffect(() => {
         freelancerDetails();
@@ -20,8 +20,8 @@ function FreelancerProfile() {
     const [frlInfo, setFrlInfo] = useState({});
 
     const freelancerDetails = async () => {
-        const freelancer = { freelancerId freelancerId }
-        const resp = await axios.post(ROOT_URL+"/FindByFreelancerId", freelancer);
+        const freelancer = { freelancerId: freelancerId }
+        const resp = await axios.post(ROOT_URL+":/FindByFreelancerId", freelancer);
         setFrlInfo(resp.data);
 
     }
@@ -35,7 +35,7 @@ function FreelancerProfile() {
                         <div class="col-md-2"></div>
                         <div class="col-md-2">
                             <div class="profile-img">
-                                <img src="https//img.icons8.com/dusk/64/000000/change-user-male.png" />
+                                <img src="https://img.icons8.com/dusk/64/000000/change-user-male.png" />
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -50,7 +50,7 @@ function FreelancerProfile() {
                                         <a
                                             class="btn btn-outline-primary m-2 "
                                             href="/EditFreelancer"
-                                        //style={{ color "White" }}
+                                        //style={{ color: "White" }}
                                         >
                                             {" "}
                                             Edit Freelancer
