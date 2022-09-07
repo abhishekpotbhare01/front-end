@@ -11,7 +11,7 @@ import { Navbar } from "./Navbar";
 import swal from "sweetalert";
 
 function UserReg() {
-  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http//abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
   const [userName, setUserName] = useState("");
   // const [custGender, setCustGender] = useState("");
@@ -58,16 +58,16 @@ function UserReg() {
 
   const addUser = async () => {
     const usr = {
-      userName: userName,
+      userName userName,
       
-      userAddress: userAddress,
-      userEmail: userEmail,
-      userPassword: userPassword,
-      userContact: userContact,
-      userStatus: userStatus,
+      userAddress userAddress,
+      userEmail userEmail,
+      userPassword userPassword,
+      userContact userContact,
+      userStatus userStatus,
     };
     try{
-    const resp = await axios.post(ROOT_URL+":5000/addUser", usr);
+    const resp = await axios.post(ROOT_URL+"/addUser", usr);
     throw new Error('myerror');
     } catch(myerror){
         swal("error", "please enter valid details", "error");
@@ -75,7 +75,7 @@ function UserReg() {
     swal("success", " Your Registration Completed Successful", "success");
     window.location.href="/Adminlogincomponent";
 
-    // const resp = await axios.post("http://localhost:5000/addUser", usr);
+    // const resp = await axios.post("http//localhost/addUser", usr);
     // if(resp.status){
     //   swal("error", "please enter valid details", "error");
     // }
@@ -86,16 +86,16 @@ function UserReg() {
   return (
     <>
       <Navbar />
-      <div class="container mt-4 mb-4" style={{border:'2px solid black'}}>
-        <div class="row" style={{ justifyContent: "left" }}>
+      <div class="container mt-4 mb-4" style={{border'2px solid black'}}>
+        <div class="row" style={{ justifyContent "left" }}>
           <div class="col-2 "></div>
-          <div class="col-8" style={{ backgroundcolor: "black" }}>
+          <div class="col-8" style={{ backgroundcolor "black" }}>
             <div class="row">
               <div class="col-2"></div>
               <div class="col-md-8">
                 <div class="do">
                   <form class="form-group" onsubmit=" return  callvalidation()">
-                    <div class="inside-form mt-3" style={{ color: "dark" }}>
+                    <div class="inside-form mt-3" style={{ color "dark" }}>
                       <center>
                         <h2>
                           <b>User Registration</b>
@@ -104,7 +104,7 @@ function UserReg() {
                     </div>
                     <div class="form-group ">
                       <label id="sty"
-                        style={{ fontSize: "14px", backgroundColor: "#99ebff" }}
+                        style={{ fontSize "14px", backgroundColor "#99ebff" }}
                       >
                         Personal Details
                       </label>
@@ -164,7 +164,7 @@ function UserReg() {
                    
                     <div class="col info-row">
                       <label id="sty"
-                        style={{ fontSize: "14px", backgroundColor: "#99ebff" }}
+                        style={{ fontSize "14px", backgroundColor "#99ebff" }}
                       >
                         Registration Info
                       </label>
@@ -172,7 +172,7 @@ function UserReg() {
 
                     <div class="form-group ">
                       <label for="email" id="sty">
-                        Email Id:<span>*</span>
+                        Email Id<span>*</span>
                       </label>
                       <input
                         type="text"
@@ -190,7 +190,7 @@ function UserReg() {
 
                     <div class="form-group ">
                       <label for="password" id="sty">
-                        Password:<span>*</span>
+                        Password<span>*</span>
                       </label>
                       <input
                         type="password"
@@ -207,7 +207,7 @@ function UserReg() {
                     </div>
                     <div class="form-group ">
                       <label for="confirmPassword" id="sty">
-                        Confirm Password:
+                        Confirm Password
                       </label>
                       <input
                         type="password"
@@ -233,7 +233,7 @@ function UserReg() {
                       </button>
                       <div id="sty">
                         <label>already have account ? </label>
-                        <a href="Adminlogincomponent" style={{color:"black"}}>Login Here</a>
+                        <a href="Adminlogincomponent" style={{color"black"}}>Login Here</a>
                       </div>
                     </div>
                   </form>

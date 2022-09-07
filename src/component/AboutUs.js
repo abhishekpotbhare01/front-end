@@ -19,7 +19,7 @@ function AboutUs() {
                    
                     <div class="d-flex justify-content-center">
 
-                        <div className="" style={{ fontFamily: "Block" }}>
+                        <div className="" style={{ fontFamily "Block" }}>
                             <br></br>
 
                             <br />

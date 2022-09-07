@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import UserNav from './UserNav';
 import axios from 'axios';
 function PaymentPage() {
-    const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+    const ROOT_URL = "http//abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
 
     const [payment, SetPayment] = useState(0)
@@ -19,9 +19,9 @@ function PaymentPage() {
 
 
     const paymentHandler = async () => {
-        const booking = { bookingId: window.localStorage.getItem("bookingId") };
+        const booking = { bookingId window.localStorage.getItem("bookingId") };
         console.log('bookingId',window.localStorage.getItem("bookingId") )
-        const res = await axios.post(ROOT_URL+":5000/GetBookingDetails", booking);
+        const res = await axios.post(ROOT_URL+"/GetBookingDetails", booking);
         setBookinglist(res.data);
     };
 
@@ -30,22 +30,22 @@ function PaymentPage() {
         const comm = (0.1 * bookingList.paymentAmount);
 
         const paymentDetails = {
-            user: { userId: bookingList.user.userId },
-            freelancer: {
-                freelancerId: bookingList.freelancer.freelancerId
+            user { userId bookingList.user.userId },
+            freelancer {
+                freelancerId bookingList.freelancer.freelancerId
 
             },
-            bookings: {
-                bookingId: bookingList.bookingId
+            bookings {
+                bookingId bookingList.bookingId
             }
             ,
 
-            freelancerAmount: bookingList.paymentAmount - comm,
-            adminAmount: comm
+            freelancerAmount bookingList.paymentAmount - comm,
+            adminAmount comm
         }
 
 
-        axios.post(ROOT_URL+":5000/savePaymentDetails", paymentDetails).then((res) => {
+        axios.post(ROOT_URL+"/savePaymentDetails", paymentDetails).then((res) => {
 
         })
 
@@ -63,7 +63,7 @@ function PaymentPage() {
             <br />
             <h1>Welcome to Payment Page</h1>  <br></br>  <br></br>
             <h3>
-                Payemnt Amount : {bookingList.paymentAmount}  <br></br>  <br>
+                Payemnt Amount  {bookingList.paymentAmount}  <br></br>  <br>
                 </br>
 
                 <button onClick={payementDoneHandle} className="btn btn-lg btn-danger"  >Confirm Payment</button>

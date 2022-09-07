@@ -14,7 +14,7 @@ export default class ErrorNotFound extends Component {
         
                
             </div>
-            <button className="btn btn btb-lg "   style={{fontSize:'30px',fontWeight:'bold'}}  >  <a href="/Homepagecomponent" >  Back to Home Page</a> </button>
+            <button className="btn btn btb-lg "   style={{fontSize'30px',fontWeight'bold'}}  >  <a href="/Homepagecomponent" >  Back to Home Page</a> </button>
             <br />
             <br />
             </div>

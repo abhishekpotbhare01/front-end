@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 export function Navbar() {
-  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http//abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
   const [click, setClick] = useState(false);
 
@@ -16,9 +16,9 @@ export function Navbar() {
 
         <div className="nav-container ">
         
-         <ul className={click ? "nav-menu active" : "nav-menu"}>
+         <ul className={click ? "nav-menu active"  "nav-menu"}>
           <li>
-          <a class="navbar-brand" href="/Homepagecomponent" style={{color:"orange"}}>Freelance Port</a>
+          <a class="navbar-brand" href="/Homepagecomponent" style={{color"orange"}}>Freelance Port</a>
             </li>
             <li className="nav-item">
               <NavLink
@@ -67,7 +67,7 @@ export function Navbar() {
             </li>
           </ul>
           <div className="nav-icon" onClick={handleClick}>
-            <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
+            <i className={click ? "fas fa-times"  "fas fa-bars"}></i>
           </div>
         </div>
       </nav>

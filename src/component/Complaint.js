@@ -4,7 +4,7 @@ import SweetAlert from "sweetalert";
 import UserNav from "./UserNav";
 
 function Complaint() {
-  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http//abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
   const [issue, setEssue] = useState("");
   const [description, setDescription] = useState("");
@@ -19,14 +19,14 @@ function Complaint() {
 
   const addComplaint = async () => {
     const complaint = {
-      complainer: "user",
-      issue: issue,
-      discription: description,
-      user: { userId: localStorage.getItem("userId") },
-      freelancer: { freelancerId: localStorage.getItem("freelancerId") },
+      complainer "user",
+      issue issue,
+      discription description,
+      user { userId localStorage.getItem("userId") },
+      freelancer { freelancerId localStorage.getItem("freelancerId") },
     };
 
-    await axios.post(ROOT_URL+":5000/addComplaint", complaint);
+    await axios.post(ROOT_URL+"/addComplaint", complaint);
     SweetAlert("", "Your complaint is posted", "success");
   };
 
@@ -45,11 +45,11 @@ function Complaint() {
     < >
       <UserNav/>
      
-      <div class="container justify-content-center align-items-center d-flex mt-5 mb-5" style={{border:"2px solid black",width:"700px"}}>
+      <div class="container justify-content-center align-items-center d-flex mt-5 mb-5" style={{border"2px solid black",width"700px"}}>
         
-      <form style={{width:"90%"}}>
+      <form style={{width"90%"}}>
         <div class="form-group ">
-          <label for="exampleFormControlInput1" style={{fontWeight:"bold",fontSize:'20px'}}>Enter your Issue</label>
+          <label for="exampleFormControlInput1" style={{fontWeight"bold",fontSize'20px'}}>Enter your Issue</label>
           <input
             type="text"
             class="form-control justify-content-center"
@@ -63,7 +63,7 @@ function Complaint() {
         </div>
 
         <div class="form-group justify-content-center">
-          <label for="exampleFormControlTextarea1" style={{fontWeight:"bold",fontSize:'20px'}}>Description</label>
+          <label for="exampleFormControlTextarea1" style={{fontWeight"bold",fontSize'20px'}}>Description</label>
           <textarea
             class="form-control"
             id="exampleFormControlTextarea1"
@@ -74,7 +74,7 @@ function Complaint() {
           ></textarea>
         </div>
 
-        <button type="button" class="btn btn-primary" style={{fontWeight:"bold",fontSize:'20px'}} onClick={validation}>
+        <button type="button" class="btn btn-primary" style={{fontWeight"bold",fontSize'20px'}} onClick={validation}>
           Post
         </button>
       </form>

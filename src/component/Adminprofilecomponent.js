@@ -13,8 +13,8 @@ function Adminprofilecomponent(){
     const [adminInfo, setAdminInfo] = useState({});
 
     const adminDetails = async () => {
-        const admin = { adminId: adminId }
-        const resp = await axios.post(ROOT_URL+":5000/findadmin", admin);
+        const admin = { adminId adminId }
+        const resp = await axios.post(ROOT_URL+"/findadmin", admin);
         setAdminInfo(resp.data);
 
     }
@@ -39,7 +39,7 @@ function Adminprofilecomponent(){
                         <div class="col-md-2"></div>
                         <div class="col-md-2">
                             <div class="profile-img">
-                                <img src="https://img.icons8.com/dusk/64/000000/change-user-male.png" />
+                                <img src="https//img.icons8.com/dusk/64/000000/change-user-male.png" />
                             </div>
                         </div>
                         <div class="col-md-6">

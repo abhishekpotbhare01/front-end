@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import Adminnavbar3 from "./Adminnavbar3";
 
 function FreelancerListComp() {
-  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http//abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
   const [freelancerList, setFreelancerList] = useState([]);
 
@@ -19,13 +19,13 @@ function FreelancerListComp() {
 
   const getFreelancerList = async () => {
     console.log("in list");
-    const res = await axios.get(ROOT_URL+":5000/FreelancerList");
+    const res = await axios.get(ROOT_URL+"/FreelancerList");
     setFreelancerList(res.data);
   };
 
   const updateStatus = async (freelancerId) => {
-    const freelancer = { freelancerId: freelancerId };
-    const res = await axios.post(ROOT_URL+":5000/updateFreelancerStatus", freelancer);
+    const freelancer = { freelancerId freelancerId };
+    const res = await axios.post(ROOT_URL+"/updateFreelancerStatus", freelancer);
     window.location.href = "/FreelancerListComp";
   };
 
@@ -41,18 +41,18 @@ function FreelancerListComp() {
 
         {freelancerList.map((item) => {
           return (
-            <div class="card m-auto mb-3 card-text d-flex" style={{ width: "400px", padding: "10px" }}>
+            <div class="card m-auto mb-3 card-text d-flex" style={{ width "400px", padding "10px" }}>
 
-              <th style={{ fontSize: '25px', color: '#000075' }}> {item.frlName}</th><hr />
-              <th style={{ fontSize: '22px' }}>Profession :{item.frlProfession}</th>
-              <th style={{ fontSize: '15px' }}>City :{item.frlCity}</th>
-              <th style={{ fontSize: '15px' }}>Contact :{item.frlContact}</th>
+              <th style={{ fontSize '25px', color '#000075' }}> {item.frlName}</th><hr />
+              <th style={{ fontSize '22px' }}>Profession {item.frlProfession}</th>
+              <th style={{ fontSize '15px' }}>City {item.frlCity}</th>
+              <th style={{ fontSize '15px' }}>Contact {item.frlContact}</th>
 
-              <th style={{ fontSize: '15px' }}>Exp(Yrs) : {item.frlExperience}</th>
-              <th style={{ fontSize: '15px' }}>Rate/hr :{item.frlRatePerHr}</th>
-              <th style={{ fontSize: '15px' }}>Email : {item.frlEmail}</th>
+              <th style={{ fontSize '15px' }}>Exp(Yrs)  {item.frlExperience}</th>
+              <th style={{ fontSize '15px' }}>Rate/hr {item.frlRatePerHr}</th>
+              <th style={{ fontSize '15px' }}>Email  {item.frlEmail}</th>
 
-              <th style={{ fontSize: '15px' }}>Status : {item.status}</th>
+              <th style={{ fontSize '15px' }}>Status  {item.status}</th>
               <center class="card-footer">
                 <button
                   class=" btn btn-primary"

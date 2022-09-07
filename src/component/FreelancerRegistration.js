@@ -8,7 +8,7 @@ import { Navbar } from "./Navbar";
 import swal from "sweetalert";
 
 function FreelancerRegistration() {
-  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http//abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
   const [frlName, setFrlName] = useState("");
   
@@ -66,21 +66,21 @@ function FreelancerRegistration() {
   const addFreelancer = async () => {
     console.log(frlProfession);
     const frl = {
-      frlName: frlName,
+      frlName frlName,
      
-      frlAddress: frlAddress,
-      frlCity: frlCity,
-      frlProfession: frlProfession,
-      frlExperience: frlExperience,
-      frlRatePerHr: frlRatePerHr,
-      frlEmail: frlEmail,
-      frlPassword: frlPassword,
-      status: status,
-      frlContact: frlContact,
+      frlAddress frlAddress,
+      frlCity frlCity,
+      frlProfession frlProfession,
+      frlExperience frlExperience,
+      frlRatePerHr frlRatePerHr,
+      frlEmail frlEmail,
+      frlPassword frlPassword,
+      status status,
+      frlContact frlContact,
     };
     
     try {
-      const resp = await axios.post(ROOT_URL+":5000/AddFreelancer", frl);
+      const resp = await axios.post(ROOT_URL+"/AddFreelancer", frl);
     
     } catch (error) {
       swal("error", "please enter valid details", "error");
@@ -93,7 +93,7 @@ function FreelancerRegistration() {
     <>
       <Navbar />
 
-      <div class="container mt-4 mb-4" style={{border:"2px solid black"}}>
+      <div class="container mt-4 mb-4" style={{border"2px solid black"}}>
         <div class="row" >
           <div class="col-2 "></div>
           <div class="col-8" >
@@ -102,7 +102,7 @@ function FreelancerRegistration() {
               <div class="col-md-8">
                 <div class="do">
                   <form class="form-group" onsubmit=" return  callvalidation()">
-                    <div class="inside-form mt-3" style={{ color: "dark" }}>
+                    <div class="inside-form mt-3" style={{ color "dark" }}>
                       <center>
                         <h2>
                           <b>Freelancer Registration</b>
@@ -111,7 +111,7 @@ function FreelancerRegistration() {
                     </div>
                     <div class="form-group ">
                       <label id="sty"
-                        style={{ fontSize: "14px", backgroundColor: "#99ebff" }}
+                        style={{ fontSize "14px", backgroundColor "#99ebff" }}
                       >
                         Personal Details
                       </label>
@@ -170,7 +170,7 @@ function FreelancerRegistration() {
 
                     <div class="form-group ">
                       <label id="sty"
-                        style={{ fontSize: "14px", backgroundColor: "#99ebff" }}
+                        style={{ fontSize "14px", backgroundColor "#99ebff" }}
                       >
                         Work Info
                       </label>
@@ -243,22 +243,22 @@ function FreelancerRegistration() {
 
                     <div class="col info-row">
                       <label class="text" id="sty"
-                        style={{ fontSize: "14px", backgroundColor: "#99ebff" }}
+                        style={{ fontSize "14px", backgroundColor "#99ebff" }}
                       >
                         Registration Info
                       </label>
                     </div>
 
                     <div class="form-group ">
-                      <label for="email" id="sty" style={{ fontSize: "15px" }}>
-                        Email Id:<span>*</span>
+                      <label for="email" id="sty" style={{ fontSize "15px" }}>
+                        Email Id<span>*</span>
                       </label>
                       <input
                         type="text"
                         class="form-control"
                         id="email"
                         name="freelancerEmail"
-                        style={{ fontSize: "15px" }}
+                        style={{ fontSize "15px" }}
                         placeholder="enter your Email"
                         onChange={(e) => {
                           setFrlEmail(e.target.value);
@@ -268,15 +268,15 @@ function FreelancerRegistration() {
                     </div>
 
                     <div class="form-group ">
-                      <label for="password" id="sty" style={{ fontSize: "15px" }}>
-                        Password:<span>*</span>
+                      <label for="password" id="sty" style={{ fontSize "15px" }}>
+                        Password<span>*</span>
                       </label>
                       <input
                         type="password"
                         class="form-control"
                         id="password"
                         name="freelancerPassword"
-                        style={{ fontSize: "15px" }}
+                        style={{ fontSize "15px" }}
                         placeholder="enter Password"
                         onChange={(e) => {
                           setFrlPassword(e.target.value);
@@ -286,8 +286,8 @@ function FreelancerRegistration() {
                       <span id="errormsg4"></span>
                     </div>
                     <div class="form-group ">
-                      <label for="confirmPassword" id="sty"  style={{ fontSize: "15px" }}>
-                        Confirm Password:<span>*</span>
+                      <label for="confirmPassword" id="sty"  style={{ fontSize "15px" }}>
+                        Confirm Password<span>*</span>
                       </label>
                       <input
                         type="password"
@@ -296,7 +296,7 @@ function FreelancerRegistration() {
                         onChange={(e) => {
                           setConPassword(e.target.value);
                         }}
-                        style={{ fontSize: "15px" }}
+                        style={{ fontSize "15px" }}
                         placeholder="confirm Password"
                       />
                       <span id="errormsg5"></span>
@@ -307,13 +307,13 @@ function FreelancerRegistration() {
                         class="btn btn-success mt-2"
                         type="submit"
                         onClick={handleForm}
-                        style={{ fontSize: "15px" }}
+                        style={{ fontSize "15px" }}
                       >
                         Submit
                       </button>
                       <div id="sty">
                         <label>already have account ? </label>
-                        <a href="Adminlogincomponent" style={{color:"black"}}>Login Here</a>
+                        <a href="Adminlogincomponent" style={{color"black"}}>Login Here</a>
                       </div>
                     </div>
                   </form>

@@ -5,7 +5,7 @@ import axios from "axios";
 import Adminnavbar3 from "./Adminnavbar3";
 
 function UserListComponent() {
-  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http//abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
   const [UserList, setUserList] = useState([]);
   useEffect(() => {
@@ -17,14 +17,14 @@ function UserListComponent() {
 
   const getUserList = async () => {
     console.log("in list");
-    const res = await axios.get(ROOT_URL+":5000/UserList");
+    const res = await axios.get(ROOT_URL+"/UserList");
     setUserList(res.data);
   };
 
   const updateStatus = async (userId) => {
-    const user = { userId: userId };
+    const user = { userId userId };
     const res = await axios.post(
-      ROOT_URL+":5000/updateUserStatus",
+      ROOT_URL+"/updateUserStatus",
       user
     );
     window.location.href = "/Userlistcomponent";
@@ -42,14 +42,14 @@ function UserListComponent() {
 
           {UserList.map((item) => {
             return (
-              <div class="card m-auto mb-3 card-text d-flex" style={{ width: "400px", padding: "10px" }}>
+              <div class="card m-auto mb-3 card-text d-flex" style={{ width "400px", padding "10px" }}>
 
-                <th style={{ fontSize: '30px', color: "#000075" }}>{item.userName}</th><hr />
-                <th style={{ fontSize: '18px', fontWeight: 'bold' }}>Email : {item.userEmail}</th>
-                <th style={{ fontSize: '18px', fontWeight: 'bold' }}>Address : {item.userAddress}</th>
-                <th style={{ fontSize: '18px', fontWeight: 'bold' }}>Contact :{item.userContact}</th>
+                <th style={{ fontSize '30px', color "#000075" }}>{item.userName}</th><hr />
+                <th style={{ fontSize '18px', fontWeight 'bold' }}>Email  {item.userEmail}</th>
+                <th style={{ fontSize '18px', fontWeight 'bold' }}>Address  {item.userAddress}</th>
+                <th style={{ fontSize '18px', fontWeight 'bold' }}>Contact {item.userContact}</th>
 
-                <th style={{ fontSize: '18px', fontWeight: 'bold' }}>Status : {item.userStatus}</th>
+                <th style={{ fontSize '18px', fontWeight 'bold' }}>Status  {item.userStatus}</th>
 
                 <center class="card-footer">
                   <button
