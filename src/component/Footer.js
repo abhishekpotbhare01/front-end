@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import 'font-awesome/css/font-awesome.min.css';
 import "./Footer.css";
 export function Footer() {
-  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "https://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
   return (
 
@@ -14,28 +14,28 @@ export function Footer() {
 
 
 
-        <a class="btn btn-outline-light btn-floating m-2" href="https://www.facebook.com/login.php" type="button"
+        <a class="btn btn-outline-light btn-floating m-2" href="httpss://www.facebook.com/login.php" type="button"
         ><i class="fa fa-facebook-f"></i
         ></a>
 
-        <a class="btn btn-outline-light btn-floating m-2" href="https://twitter.com/login/" type="button"
+        <a class="btn btn-outline-light btn-floating m-2" href="httpss://twitter.com/login/" type="button"
         ><i class="fa fa-twitter"></i
         ></a>
 
-        <a class="btn btn-outline-light btn-floating m-2" href="https://myaccount.google.com/" Type="button"
+        <a class="btn btn-outline-light btn-floating m-2" href="httpss://myaccount.google.com/" Type="button"
         ><i class="fa fa-google"></i
         ></a>
 
-        <a class="btn btn-outline-light btn-floating m-2" href="https://www.instagram.com/_kussh" type="button"
+        <a class="btn btn-outline-light btn-floating m-2" href="httpss://www.instagram.com/_kussh" type="button"
         ><i class="fa fa-instagram"></i
         ></a>
 
-        <a class="btn btn-outline-light btn-floating m-2" href="https://www.linkedin.com/uas/login" type="button"
+        <a class="btn btn-outline-light btn-floating m-2" href="httpss://www.linkedin.com/uas/login" type="button"
         ><i class="fa fa-linkedin"></i
         ></a>
 
 
-        <a class="btn btn-outline-light btn-floating m-2" href="https://github.com/login" type="button"
+        <a class="btn btn-outline-light btn-floating m-2" href="httpss://github.com/login" type="button"
         ><i class="fa fa-github"></i
         ></a>
 

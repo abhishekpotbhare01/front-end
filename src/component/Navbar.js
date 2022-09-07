@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 export function Navbar() {
-  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "https://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
   const [click, setClick] = useState(false);
 

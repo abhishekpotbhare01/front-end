@@ -39,7 +39,7 @@ function Adminprofilecomponent(){
                         <div class="col-md-2"></div>
                         <div class="col-md-2">
                             <div class="profile-img">
-                                <img src="https://img.icons8.com/dusk/64/000000/change-user-male.png" />
+                                <img src="httpss://img.icons8.com/dusk/64/000000/change-user-male.png" />
                             </div>
                         </div>
                         <div class="col-md-6">

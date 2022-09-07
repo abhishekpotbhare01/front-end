@@ -6,7 +6,7 @@ import axios from 'axios';
 import four from "./assets/pimage/image123.jpg";
 
 export default function AdminHome() {
-  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "https://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
   useEffect(()=>{
     if(localStorage.getItem("role")==="null" || localStorage.getItem("role")!="admin" )

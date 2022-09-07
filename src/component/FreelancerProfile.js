@@ -5,7 +5,7 @@ import './adminprofile.component.css';
 import axios from 'axios';
 import Employeehomepagecomponent from './Employeehomepagecomponent';
 function FreelancerProfile() {
-    const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+    const ROOT_URL = "https://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
     useEffect(() => {
         freelancerDetails();
@@ -35,7 +35,7 @@ function FreelancerProfile() {
                         <div class="col-md-2"></div>
                         <div class="col-md-2">
                             <div class="profile-img">
-                                <img src="https://img.icons8.com/dusk/64/000000/change-user-male.png" />
+                                <img src="httpss://img.icons8.com/dusk/64/000000/change-user-male.png" />
                             </div>
                         </div>
                         <div class="col-md-6">
