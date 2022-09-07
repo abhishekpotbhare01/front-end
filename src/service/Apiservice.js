@@ -1,8 +1,8 @@
 import axios from 'axios';
 const ROOT_URL = "abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
-const USER_API_BASE_URL = ROOT_URL+':8081/users';
-const USER_API_BASE_URL1=ROOT_URL+':8081'
+const USER_API_BASE_URL = ROOT_URL+':5000/users';
+const USER_API_BASE_URL1=ROOT_URL+':5000'
 class Apiservice {
 
     

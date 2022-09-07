@@ -23,7 +23,7 @@ function UserProfile(){
       
     const userDetails = async () => {
             const user = { userId: userId }
-            const resp = await axios.post(ROOT_URL+":8081/findByUserId", user);
+            const resp = await axios.post(ROOT_URL+":5000/findByUserId", user);
             setUserInfo(resp.data);
       }
 

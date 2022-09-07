@@ -67,7 +67,7 @@ function UserReg() {
       userStatus: userStatus,
     };
     try{
-    const resp = await axios.post(ROOT_URL+":8081/addUser", usr);
+    const resp = await axios.post(ROOT_URL+":5000/addUser", usr);
     throw new Error('myerror');
     } catch(myerror){
         swal("error", "please enter valid details", "error");
@@ -75,7 +75,7 @@ function UserReg() {
     swal("success", " Your Registration Completed Successful", "success");
     window.location.href="/Adminlogincomponent";
 
-    // const resp = await axios.post("http://localhost:8081/addUser", usr);
+    // const resp = await axios.post("http://localhost:5000/addUser", usr);
     // if(resp.status){
     //   swal("error", "please enter valid details", "error");
     // }

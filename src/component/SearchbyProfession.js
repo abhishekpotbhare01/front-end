@@ -17,7 +17,7 @@ function SearchByProfession() {
   const getFreelancerList = async () => {
     console.log("in list");
     const freelancer = { frlProfession: selectedProfession };
-    const res = await axios.post(ROOT_URL+":8081/GetByProfession", freelancer);
+    const res = await axios.post(ROOT_URL+":5000/GetByProfession", freelancer);
     setFreelancerList(res.data);
   };
   useEffect(() => {
@@ -30,13 +30,13 @@ function SearchByProfession() {
 
   const getAllFreelancerList = async () => {
     console.log("in Freelancer list");
-    const res = await axios.get(ROOT_URL+":8081/FreelancerList");
+    const res = await axios.get(ROOT_URL+":5000/FreelancerList");
 
     setFreelancerList(res.data);
   };
 
   // const allProf = async () => {
-  //   const profs = await axios.get("http://localhost:8081/GetAllProfession");
+  //   const profs = await axios.get("http://localhost:5000/GetAllProfession");
   //   console.log("in Get all profession list");
   //   setProf(profs.data);
   // };
@@ -63,7 +63,7 @@ function SearchByProfession() {
       bookingStatus: "pending",
     };
 
-    await axios.post(ROOT_URL+":8081/AddBooking", bookingdetails);
+    await axios.post(ROOT_URL+":5000/AddBooking", bookingdetails);
     swal("","request sent","success");
   };
 

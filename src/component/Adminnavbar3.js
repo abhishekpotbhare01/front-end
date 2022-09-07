@@ -26,7 +26,7 @@ function Adminnavbar3() {
 
   const adminDetails = async () => {
     const admin = { adminId: adminId }
-    const resp = await axios.post(ROOT_URL+":8081/findAdmin", admin);
+    const resp = await axios.post(ROOT_URL+":5000/findAdmin", admin);
     setAdminInfo(resp.data);
   }
 

@@ -12,7 +12,7 @@ function ViewComplaints() {
 
   const getCompList = async () => {
     const comp = { user: { userId: localStorage.getItem("userId") } };
-    const res = await axios.post(ROOT_URL+":8081/getCompByUser", comp);
+    const res = await axios.post(ROOT_URL+":5000/getCompByUser", comp);
     setCompList(res.data);
   };
   return (

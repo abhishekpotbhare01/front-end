@@ -17,14 +17,14 @@ function UserListComponent() {
 
   const getUserList = async () => {
     console.log("in list");
-    const res = await axios.get(ROOT_URL+":8081/UserList");
+    const res = await axios.get(ROOT_URL+":5000/UserList");
     setUserList(res.data);
   };
 
   const updateStatus = async (userId) => {
     const user = { userId: userId };
     const res = await axios.post(
-      ROOT_URL+":8081/updateUserStatus",
+      ROOT_URL+":5000/updateUserStatus",
       user
     );
     window.location.href = "/Userlistcomponent";

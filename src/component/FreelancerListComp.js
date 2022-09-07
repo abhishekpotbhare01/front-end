@@ -19,13 +19,13 @@ function FreelancerListComp() {
 
   const getFreelancerList = async () => {
     console.log("in list");
-    const res = await axios.get(ROOT_URL+":8081/FreelancerList");
+    const res = await axios.get(ROOT_URL+":5000/FreelancerList");
     setFreelancerList(res.data);
   };
 
   const updateStatus = async (freelancerId) => {
     const freelancer = { freelancerId: freelancerId };
-    const res = await axios.post(ROOT_URL+":8081/updateFreelancerStatus", freelancer);
+    const res = await axios.post(ROOT_URL+":5000/updateFreelancerStatus", freelancer);
     window.location.href = "/FreelancerListComp";
   };
 

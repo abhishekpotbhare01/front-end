@@ -21,7 +21,7 @@ function FreelancerProfile() {
 
     const freelancerDetails = async () => {
         const freelancer = { freelancerId: freelancerId }
-        const resp = await axios.post(ROOT_URL+":8081/FindByFreelancerId", freelancer);
+        const resp = await axios.post(ROOT_URL+":5000/FindByFreelancerId", freelancer);
         setFrlInfo(resp.data);
 
     }

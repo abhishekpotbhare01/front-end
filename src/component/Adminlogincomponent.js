@@ -40,7 +40,7 @@ function Adminlogincomponent() {
     console.log("inside function");
     if (role === "admin") {
       user = { adminEmail: email, adminPassword: password };
-      const res = await axios.post(ROOT_URL+":8081/checkAdmin", user);
+      const res = await axios.post(ROOT_URL+":5000/checkAdmin", user,{mode:'cors'});
 
       if (res.data.adminEmail=="admin@gmail.com" || res.data.adminPassword=="admin@123") {
         localStorage.setItem("userId", res.data.adminId)
@@ -52,7 +52,7 @@ function Adminlogincomponent() {
       }
     } else if (role === "user") {
       user = { userEmail: email, userPassword: password };
-      const res = await axios.post(ROOT_URL+":8081/checkUser", user);
+      const res = await axios.post(ROOT_URL+":5000/checkUser", user);
       console.log("inside check user role");
       if (res.data.userStatus === "active") {
         localStorage.setItem("userId", res.data.userId)
@@ -64,7 +64,7 @@ function Adminlogincomponent() {
       }
     } else if (role === "freelancer") {
       user = { frlEmail: email, frlPassword: password };
-      const res = await axios.post(ROOT_URL+":8081/CheckFreelancer", user);
+      const res = await axios.post(ROOT_URL+":5000/CheckFreelancer", user);
       console.log("inside check freelancer role");
       if (res.data.status === "active") {
         localStorage.setItem("userId", res.data.freelancerId)

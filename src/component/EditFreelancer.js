@@ -37,7 +37,7 @@ export class EditFreelancer extends Component {
 
         const freelancer = { freelancerId: freelancerId }
        // alert("freelancerId id ", localStorage.getItem("userId"));
-        axios.post(ROOT_URL+":8081/FindByFreelancerId", freelancer)
+        axios.post(ROOT_URL+":5000/FindByFreelancerId", freelancer)
             .then((res) => {
                 let freelancer = res.data;
                 console.log(freelancer);
@@ -85,7 +85,7 @@ export class EditFreelancer extends Component {
      const   ROOT_URL = "abhishekpotbhare.us-east-1.elasticbeanstalk.com";
 
 
-        axios.put(ROOT_URL+":8081/editFreelancer/" + this.state.freelancerId, freelancer).then((res) => {
+        axios.put(ROOT_URL+":5000/editFreelancer/" + this.state.freelancerId, freelancer).then((res) => {
 
            // alert(res.data);
             window.location.href = "/FreelancerProfile";

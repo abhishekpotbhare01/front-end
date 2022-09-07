@@ -26,7 +26,7 @@ function Complaint() {
       freelancer: { freelancerId: localStorage.getItem("freelancerId") },
     };
 
-    await axios.post(ROOT_URL+":8081/addComplaint", complaint);
+    await axios.post(ROOT_URL+":5000/addComplaint", complaint);
     SweetAlert("", "Your complaint is posted", "success");
   };
 

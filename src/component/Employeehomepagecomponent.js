@@ -22,7 +22,7 @@ function Employeehomepagecomponent() {
 
   useEffect(() => {
 
-    axios.post(ROOT_URL+":8081/FindByFreelancerId", freelancer).then((res) => {
+    axios.post(ROOT_URL+":5000/FindByFreelancerId", freelancer).then((res) => {
       setBalance(res.data.totalAmount);
       console.log(" balnce chebckloo ", res.data.totalAmount)
     })

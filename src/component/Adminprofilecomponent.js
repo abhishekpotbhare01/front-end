@@ -14,7 +14,7 @@ function Adminprofilecomponent(){
 
     const adminDetails = async () => {
         const admin = { adminId: adminId }
-        const resp = await axios.post(ROOT_URL+":8081/findadmin", admin);
+        const resp = await axios.post(ROOT_URL+":5000/findadmin", admin);
         setAdminInfo(resp.data);
 
     }

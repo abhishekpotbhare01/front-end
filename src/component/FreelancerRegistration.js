@@ -80,7 +80,7 @@ function FreelancerRegistration() {
     };
     
     try {
-      const resp = await axios.post(ROOT_URL+":8081/AddFreelancer", frl);
+      const resp = await axios.post(ROOT_URL+":5000/AddFreelancer", frl);
     
     } catch (error) {
       swal("error", "please enter valid details", "error");

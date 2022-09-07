@@ -15,7 +15,7 @@ function Searchbycities() {
   const getFreelancerList = async () => {
     console.log("in freelancers list");
     const freelancer = { frlCity: selectedCity };
-    const res = await axios.post(ROOT_URL+":8081/GetByCity", freelancer);
+    const res = await axios.post(ROOT_URL+":5000/GetByCity", freelancer);
     setFreelancerList(res.data);
     console.log(freelancer)
     console.log(" in getEmpList ", res.data)
@@ -29,13 +29,13 @@ function Searchbycities() {
 
   const getallFreelancerList = async () => {
     console.log("in list");
-    const res = await axios.get(ROOT_URL+":8081/FreelancerList");
+    const res = await axios.get(ROOT_URL+":5000/FreelancerList");
 
     setFreelancerList(res.data);
   };
 
   // const cities = async () => {
-  //   const City1 = await axios.get("http://localhost:8081/GetAllCities");
+  //   const City1 = await axios.get("http://localhost:5000/GetAllCities");
   //   setCity(City1.data.map( (resp1) => {
   //     return resp1.frlCity;
   //   }));
@@ -64,7 +64,7 @@ function Searchbycities() {
       bookingStatus: "pending",
     };
 
-    await axios.post(ROOT_URL+":8081/AddBooking", bookingdetails);
+    await axios.post(ROOT_URL+":5000/AddBooking", bookingdetails);
     swal("", "request sent", "success");
   };
 
