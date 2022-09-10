@@ -11,7 +11,7 @@ import { Navbar } from "./Navbar";
 import swal from "sweetalert";
 
 function UserReg() {
-  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http://backend-env.eba-m3qra65j.us-east-1.elasticbeanstalk.com";
 
   const [userName, setUserName] = useState("");
   // const [custGender, setCustGender] = useState("");

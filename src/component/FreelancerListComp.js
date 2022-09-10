@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import Adminnavbar3 from "./Adminnavbar3";
 
 function FreelancerListComp() {
-  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http://backend-env.eba-m3qra65j.us-east-1.elasticbeanstalk.com";
 
   const [freelancerList, setFreelancerList] = useState([]);
 

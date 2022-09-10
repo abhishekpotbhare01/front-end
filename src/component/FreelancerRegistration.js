@@ -8,7 +8,7 @@ import { Navbar } from "./Navbar";
 import swal from "sweetalert";
 
 function FreelancerRegistration() {
-  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http://backend-env.eba-m3qra65j.us-east-1.elasticbeanstalk.com";
 
   const [frlName, setFrlName] = useState("");
   

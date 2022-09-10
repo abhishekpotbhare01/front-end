@@ -7,7 +7,7 @@ function Searchbycities() {
   const [city, setCity] = useState([]);
   const [selectedCity, setSelectedCity] = useState("");
   const [freelancerlist, setFreelancerList] = useState([]);
-  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http://backend-env.eba-m3qra65j.us-east-1.elasticbeanstalk.com";
   useEffect(() => {
     cities();
   }, []);

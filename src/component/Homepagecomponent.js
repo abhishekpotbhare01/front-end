@@ -12,7 +12,7 @@ import six from "./assets/DM.jpg";
 import { Navbar } from "./Navbar";
 
 function Homepagecomponent() {
-  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http://backend-env.eba-m3qra65j.us-east-1.elasticbeanstalk.com";
 
   return (
     <>

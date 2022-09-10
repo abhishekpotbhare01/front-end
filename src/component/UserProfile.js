@@ -5,7 +5,7 @@ import './adminprofile.component.css';
 import UserNav from './UserNav';
 import axios from 'axios';
 function UserProfile(){
-    const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+    const ROOT_URL = "http://backend-env.eba-m3qra65j.us-east-1.elasticbeanstalk.com";
 
 
     useEffect(()=>{

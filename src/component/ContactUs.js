@@ -9,7 +9,7 @@ import four from "./assets/images/plumber.jpg";
 import five from "./assets/images/painting.jpg";
 import six from "./assets/images/customer.jpg";
 function AboutUs() {
-  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http://backend-env.eba-m3qra65j.us-east-1.elasticbeanstalk.com";
 
 
   return (

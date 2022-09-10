@@ -8,7 +8,7 @@ import Employeehomepagecomponent from "./Employeehomepagecomponent";
 import { Carousel } from 'react-bootstrap';
 import { useEffect } from "react";
 export default function FreelancerHome() {
-  const ROOT_URL = "http://abhishekpotbhare.us-east-1.elasticbeanstalk.com";
+  const ROOT_URL = "http://backend-env.eba-m3qra65j.us-east-1.elasticbeanstalk.com";
 
   useEffect(() => {
 
